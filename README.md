@@ -12,3 +12,11 @@ By using pip command, it will directly download and isntall additional python pa
  
 
 An alternative (or maybe combination?) would be to reference a requirements.txt file. If this approach is used then requirements.txt should exist in root of the repo.
+
+When you run this action it will say it fails,however it is a warning.
+Since in this workflow you make use of a standard workflow called setup-python@v3. This workflow seems to contain a deprecated command: `set-output` 
+
+Hence when you run it under "Actions" menu, the steop where it runs setup-python@v3 will give below warning. And in a later step it will indicate it failed (but actually it is a warning)
+
+Run actions/setup-python@v3
+Warning: The `set-output` command is deprecated and will be disabled soon. Please upgrade to using Environment Files. For more information see: https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
