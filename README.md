@@ -23,6 +23,7 @@ Warning: The `set-output` command is deprecated and will be disabled soon. Pleas
 
 In this action definition in the file python-package.yml it contains a condition for checking if requirements.txt exists. When I have added the requirements.txt to root of repo and in this file listed at least one package then it will install also this/these packages. 
 You find that this step is completed if you under Actions tab: 
+
 Go to the workflow which has run, here choose the job (in this case there are 3 jobs thanks to the matrix command). Once you have chosen one job, you can see the steps, go to the step "Install dependencies".
 
 Here you find any python packages installed directly with pip install, but also any packages installed via file requirements.txt
