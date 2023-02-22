@@ -11,7 +11,7 @@ By using pip command, it will directly download and isntall additional python pa
  python -m pip install flake8 pytest
  
 
-An alternative (or maybe combination?) would be to reference a requirements.txt file. If this approach is used then requirements.txt should exist in root of the repo.
+An alternative (or maybe combination?) would be to reference a requirements.txt file. If this approach is used then requirements.txt should exist in root of the repo. See more below
 
 When you run this action it will say it fails,however it is a warning.
 Since in this workflow you make use of a standard workflow called setup-python@v3. This workflow seems to contain a deprecated command: `set-output` 
@@ -20,3 +20,7 @@ Hence when you run it under "Actions" menu, the steop where it runs setup-python
 
 Run actions/setup-python@v3
 Warning: The `set-output` command is deprecated and will be disabled soon. Please upgrade to using Environment Files. For more information see: https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
+
+In this action definition in the file python-package.yml it contains a condition for checking if requirements.txt exists. When I have added the requirements.txt to root of repo and in this file listed at least one package then it will install also this/these packages. 
+You find that this step is completed if you under Actions tab go to the workflow which has run and go to the step "Install dependencies".
+Here you find any python packages installed directly with *pip install, but also any packages installed via file requirements.txt
