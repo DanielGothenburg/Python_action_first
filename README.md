@@ -20,6 +20,7 @@ Since in this workflow you make use of a standard workflow called setup-python@v
 Hence when you run it under "Actions" menu, the steop where it runs setup-python@v3 will give below warning. And in a later step it will indicate it failed (but actually it is a warning)
 
 Extract from the instruction page reg this warning triggered by this action:
+
 Run actions/setup-python@v3
 Warning: The `set-output` command is deprecated and will be disabled soon. Please upgrade to using Environment Files. For more information see: https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
 
