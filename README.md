@@ -40,3 +40,5 @@ You find that this step is completed if you navigate as folows underv the Action
 Go to the workflow which has run, here choose the job (in this case there are 3 jobs thanks to the matrix command). Once you have chosen one job, you can see the steps, go to the step "Install dependencies".
 
 Here you find any python packages installed directly with pip install, but also any packages installed via file requirements.txt
+
+As shown above, it will use imported libraries from requirements.txt when running program app.py
