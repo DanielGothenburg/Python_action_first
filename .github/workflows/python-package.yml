@@ -39,4 +39,4 @@ jobs:
   #      pytest
     - name: run an application
       run: |
-        python app.py
+          python app.py
