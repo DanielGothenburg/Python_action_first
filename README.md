@@ -7,6 +7,14 @@ In a file called: python-package.yml
 
 This workflow definition so far only makes use of default capabilities which come with deploying to a Github hosted runner. So it uses that it has a python environment installed on the runner which enables using commands like pip.
 '
+The worflow will:
+
+Take any files in root directory and try and run these files. Currently this covers:
+app.py -> A python application which prints "Hellow World" and activates (import) a library
+requirements.text -> a file which is used by Python to find out if there are libraries to be installed (such as the library used by program app.py)
+
+There are also other ways to import libraries, as is shown in the action definition. Details follow here:
+
 By using pip command, it will directly download and isntall additional python packages. This is done in command:
  python -m pip install flake8 pytest
  You can of course install more packages in this way using pip as part of the workflow definition file (in this ex file python-package.yml)
